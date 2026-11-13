@@ -1,0 +1,177 @@
+:root {
+  --cor-oliveira: #5a6430;
+  --oliveira-claro: #818a5a;
+  --cor-mais-clara: rgb(226, 209, 179);
+  --cor-destaque: #6b0505;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font: 100 60pt 'Times New Roman', serif;
+  color: var(--cor-mais-clara);
+}
+
+body {
+  min-height: 100vh;
+}
+
+main {
+  position: relative;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  width: 100%;
+}
+
+header * {
+  z-index: 500;
+}
+
+.logomarca {
+  width: 8rem;
+  aspect-ratio: 1 / 0.25;
+}
+
+.icone {
+  width: 1.5rem;
+  aspect-ratio: 1 / 1.1;
+}
+
+#secao1 {
+  background: radial-gradient(circle at center, #b5194a, var(--cor-destaque));
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+#secao2 {
+  padding: 3rem;
+}
+
+.divisor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10rem;
+  border: 1px solid var(--cor-oliveira);
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 20px 0;
+}
+
+.carrossel {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  
+  /* Limita a largura ao tamanho do .divisor para forçar a rolagem */
+  width: 100%; 
+  overflow-x: auto; /* 'auto' mostra a barra apenas se necessário */
+  scroll-behavior: smooth;
+  
+  /* Melhora a experiência de arrastar no celular/touchpad */
+  scroll-snap-type: x mandatory; 
+  padding-bottom: 8px; /* Espaço para a barra de rolagem não colar nos itens */
+  scrollbar-width: none; 
+  
+  /* Esconde no Internet Explorer e Edge antigo */
+  -ms-overflow-style: none; 
+}
+
+/* Esconde a barra no Chrome, Safari e Edge moderno */
+.carrossel::-webkit-scrollbar {
+  display: none;
+}
+
+.carrossel > div {
+  /* Impede que os itens sejam esmagados */
+  flex-shrink: 0; 
+  width: 4rem;
+  aspect-ratio: 1 / 1;
+  background-color: var(--oliveira-claro);
+  border-radius: 8px; /* Opcional: combina com a borda do .divisor */
+  scroll-snap-align: start; /* Alinha o item perfeitamente ao rolar */
+}
+
+#secao1 .logomarca {
+  width: 20rem;
+  position: absolute;
+  left: 50%;
+  top: 35%;
+  transform: translate(-50%, -50%);
+  transform-origin: center right;
+}
+
+#secao1 span {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 800;
+  font-size: 1.2rem;
+  text-wrap: nowrap;
+}
+
+#secao1 button {
+  position: absolute;
+  left: 5%;
+  margin: 20px;
+  padding: 50px 80px;
+  border-radius: 9999px;
+  border: none;
+  background-color: var(--cor-oliveira);
+  color: var(--cor-mais-clara);
+  font-weight: 800;
+}
+
+#secao1 button:nth-of-type(2) {
+  left: 45%;
+  background: none;
+  border: 1px solid var(--cor-oliveira);
+  color: var(--cor-mais-clara);
+}
+
+#secao1 button:hover {
+  box-shadow: 0 0 20px -2px var(--cor-destaque);
+  transform: translateY(-10%);
+}
+
+#secao1 button:nth-of-type(2):hover {
+  box-shadow: 0 0 20px -2px var(--cor-destaque), inset 0 0 8px -1px var(--cor-destaque);
+}
+
+#ramo_de_oliveira {
+  position: absolute;
+  width: 50vw;
+  aspect-ratio: 1 / 0.5;
+  animation: ramo 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  user-select: none;
+  z-index: 100;
+  filter: drop-shadow(0 0 20px var(--cor-destaque));
+}
+
+@keyframes ramo {
+  0% {
+    opacity: 0;
+    left: 0%;
+    top: 100%;
+    transform: translate(-100%, 0%) scale(3) rotateZ(50deg);
+  }
+  25% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1) rotateZ(120deg);
+  }
+}
