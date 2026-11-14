@@ -1,0 +1,17 @@
+┌──────────────────────────────────────────┐
+│ Eliora·                        Contato   │  topo: marca pequena
+│                                          │
+│           (Eliora enorme, apagada)       │
+│               🌿 ramo 3D 🌿             │  hero
+│          luz âmbar ao redor              │
+│   Sua história, em plena luz.            │
+│   [Conhecer serviços]  [Contratar]       │
+├──────────────────────────────────────────┤
+│  Trabalhos          ◀ ▢  ▢▢  ▢ ▶      │  carrossel
+├──────────────────────────────────────────┤
+│  Sobre: cena com o ramo + texto          │  scroll animado
+├──────────────────────────────────────────┤
+│  “Depoimento grande”  — nome, tipo       │  comentários
+├──────────────────────────────────────────┤
+│  Contato · redes · dados da empresa      │  rodapé
+└──────────────────────────────────────────┘

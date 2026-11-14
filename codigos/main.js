@@ -1,3 +1,83 @@
+gsap.registerPlugin(ScrollToPlugin, Observer);
+
+const secoes = gsap.utils.toArray("main > section");
+
+let secaoAtual = 0;
+let animando = false;
+
+function irParaSecao(indice) {
+  indice = gsap.utils.clamp(0, secoes.length - 1, indice);
+
+  if (animando || indice === secaoAtual) return;
+
+  animando = true;
+  secaoAtual = indice;
+
+  gsap.to(window, {
+    duration: 1.8,
+    scrollTo: {
+      y: secoes[indice],
+      autoKill: false
+    },
+    ease: "power3.inOut",
+    overwrite: true,
+
+    onComplete: () => {
+      animando = false;
+    }
+  });
+}
+
+secaoAtual = secoes.reduce((maisProxima, secao, indice) => {
+  const distancia = Math.abs(
+    secao.offsetTop - window.scrollY
+  );
+
+  const distanciaAtual = Math.abs(
+    secoes[maisProxima].offsetTop - window.scrollY
+  );
+
+  return distancia < distanciaAtual ? indice : maisProxima;
+}, 0);
+
+Observer.create({
+  target: window,
+  type: "wheel,touch",
+  preventDefault: true,
+  tolerance: 20,
+  wheelSpeed: 1,
+
+  onDown: () => {
+    irParaSecao(secaoAtual + 1);
+  },
+
+  onUp: () => {
+    irParaSecao(secaoAtual - 1);
+  }
+});
+
+window.addEventListener("keydown", (e) => {
+  if (["ArrowDown", "PageDown", " "].includes(e.key)) {
+    e.preventDefault();
+    irParaSecao(secaoAtual + 1);
+  }
+
+  if (["ArrowUp", "PageUp"].includes(e.key)) {
+    e.preventDefault();
+    irParaSecao(secaoAtual - 1);
+  }
+
+  if (e.key === "Home") {
+    e.preventDefault();
+    irParaSecao(0);
+  }
+
+  if (e.key === "End") {
+    e.preventDefault();
+    irParaSecao(secoes.length - 1);
+  }
+});
+
 const tituloPrc = document.querySelector('#secao1 h1');
 const textoPrc = document.querySelector('#secao1 span');
 const ramo = document.getElementById('ramo_de_oliveira');

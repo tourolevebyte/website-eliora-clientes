@@ -1,12 +1,12 @@
 ----------------------------------------------------------------------------
 Título:
-  Margem do Ícone
+  Adição de Seções e Scroll
 
 ----------------------------------------------------------------------------
 Fase de Testes:
-  - Versão 1.0.5
+  - Versão 1.0.6
 
 Descrição:
-  Remoção da margem em telas menores.
+  Adicionado mais seções e modificação no comportamento do scroll y.
 
 ----------------------------------------------------------------------------

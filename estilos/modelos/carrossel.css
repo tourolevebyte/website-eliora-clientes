@@ -1,0 +1,25 @@
+.carrossel {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  width: 100%; 
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory; 
+  padding-bottom: 8px;
+  scrollbar-width: none; 
+  -ms-overflow-style: none; 
+}
+
+.carrossel::-webkit-scrollbar {
+  display: none;
+}
+
+.carrossel > div {
+  flex-shrink: 0; 
+  width: 30%;
+  aspect-ratio: 1 / 1;
+  background-color: var(--oliveira-claro);
+  border-radius: 8px;
+  scroll-snap-align: start;
+}
