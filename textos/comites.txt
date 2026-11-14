@@ -1,8 +1,12 @@
+----------------------------------------------------------------------------
 Título:
-  Proporção e fundo
+  Margem do Ícone
 
+----------------------------------------------------------------------------
 Fase de Testes:
-  - Versão 1.0.4
+  - Versão 1.0.5
 
 Descrição:
-  Alteração na cor de fundo, e proporções dos elementos em telas maiores;
+  Remoção da margem em telas menores.
+
+----------------------------------------------------------------------------
