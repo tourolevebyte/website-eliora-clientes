@@ -10,7 +10,7 @@
   padding: 0;
   box-sizing: border-box;
   font: 100 60pt 'Times New Roman', serif;
-  color: var(--cor-mais-clara);
+  color: var(--oliveira-claro);
 }
 
 body {
@@ -36,8 +36,12 @@ header * {
   z-index: 500;
 }
 
+section {
+  min-height: 100vh;
+}
+
 .logomarca {
-  width: 8rem;
+  width: 40px;
   aspect-ratio: 1 / 0.25;
 }
 
@@ -47,7 +51,7 @@ header * {
 }
 
 #secao1 {
-  background: radial-gradient(circle at center, #b5194a, var(--cor-destaque));
+  background: radial-gradient(circle at center, #ebc28a, var(--cor-mais-clara));
   width: 100%;
   height: 100vh;
   position: relative;
@@ -72,38 +76,30 @@ header * {
   display: flex;
   gap: 10px;
   align-items: center;
-  
-  /* Limita a largura ao tamanho do .divisor para forçar a rolagem */
   width: 100%; 
-  overflow-x: auto; /* 'auto' mostra a barra apenas se necessário */
+  overflow-x: auto;
   scroll-behavior: smooth;
-  
-  /* Melhora a experiência de arrastar no celular/touchpad */
   scroll-snap-type: x mandatory; 
-  padding-bottom: 8px; /* Espaço para a barra de rolagem não colar nos itens */
+  padding-bottom: 8px;
   scrollbar-width: none; 
-  
-  /* Esconde no Internet Explorer e Edge antigo */
   -ms-overflow-style: none; 
 }
 
-/* Esconde a barra no Chrome, Safari e Edge moderno */
 .carrossel::-webkit-scrollbar {
   display: none;
 }
 
 .carrossel > div {
-  /* Impede que os itens sejam esmagados */
   flex-shrink: 0; 
   width: 4rem;
   aspect-ratio: 1 / 1;
   background-color: var(--oliveira-claro);
-  border-radius: 8px; /* Opcional: combina com a borda do .divisor */
-  scroll-snap-align: start; /* Alinha o item perfeitamente ao rolar */
+  border-radius: 8px;
+  scroll-snap-align: start;
 }
 
 #secao1 .logomarca {
-  width: 20rem;
+  width: 70%;
   position: absolute;
   left: 50%;
   top: 35%;
@@ -116,8 +112,10 @@ header * {
   left: 50%;
   transform: translate(-50%, -50%);
   font-weight: 800;
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   text-wrap: nowrap;
+  color: var(--cor-destaque);
+  text-shadow: 0 0 40px #6b050588;
 }
 
 #secao1 button {
@@ -134,28 +132,28 @@ header * {
 
 #secao1 button:nth-of-type(2) {
   left: 45%;
-  background: none;
+  background: transparent;
   border: 1px solid var(--cor-oliveira);
-  color: var(--cor-mais-clara);
+  color: var(--cor-oliveira);
 }
 
 #secao1 button:hover {
-  box-shadow: 0 0 20px -2px var(--cor-destaque);
+  box-shadow: 0 0 20px -2px var(--cor-oliveira);
   transform: translateY(-10%);
 }
 
 #secao1 button:nth-of-type(2):hover {
-  box-shadow: 0 0 20px -2px var(--cor-destaque), inset 0 0 8px -1px var(--cor-destaque);
+  box-shadow: 0 0 20px -2px var(--cor-oliveira), inset 0 0 10px -1px var(--cor-oliveira);
 }
 
 #ramo_de_oliveira {
   position: absolute;
-  width: 50vw;
+  width: 50%;
   aspect-ratio: 1 / 0.5;
   animation: ramo 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
   user-select: none;
   z-index: 100;
-  filter: drop-shadow(0 0 20px var(--cor-destaque));
+  filter: drop-shadow(0 0 20px var(--cor-oliveira));
 }
 
 @keyframes ramo {
