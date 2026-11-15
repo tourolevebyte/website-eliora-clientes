@@ -64,11 +64,11 @@ Observer.create({
   tolerance: 20,
 
   onDown: () => {
-    irParaSecao(secaoAtual + 1);
+    irParaSecao(secaoAtual - 1);
   },
 
   onUp: () => {
-    irParaSecao(secaoAtual - 1);
+    irParaSecao(secaoAtual + 1);
   }
 });
 

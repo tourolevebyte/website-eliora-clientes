@@ -1,12 +1,12 @@
 ----------------------------------------------------------------------------
 Título:
-  Rolagem de página e Ramo de oliveira
+  Manutenção
 
 ----------------------------------------------------------------------------
 Fase de Testes:
-  - Versão 1.0.7
+  - Versão 1.0.72
 
 Descrição:
-  Reparação da rolagem de página no dispositivo móvel e alteração no ramo de olieira
+  Mudança no código de rolagem de página
 
 ----------------------------------------------------------------------------
