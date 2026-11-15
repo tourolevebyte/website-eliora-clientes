@@ -60,6 +60,18 @@ h2 {
   padding: 60px 0;
 }
 
+h3 {
+  font-size: 80px;
+  color: var(--cor-oliveira);
+}
+
+p {
+  font-size: 80px;
+  padding: 80px 20px;
+  text-align: justify;
+  text-indent: 40px;
+}
+
 .divisor {
   display: flex;
   flex-direction: column;

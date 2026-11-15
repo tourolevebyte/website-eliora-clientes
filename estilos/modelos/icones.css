@@ -16,5 +16,4 @@
   animation: ramo 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
   user-select: none;
   z-index: 100;
-  filter: drop-shadow(0 0 20px var(--cor-oliveira));
 }

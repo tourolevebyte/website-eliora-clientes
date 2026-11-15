@@ -1,15 +1,15 @@
 ----------------------------------------------------------------------------
 Título Corrente:
-  - Seção 2 (Trabalhos)
+  - Seção 3 (Sobre)
 
 Modelos de Títulos:
   - Manutenção (para reparações curtas)
 
 ----------------------------------------------------------------------------
 Fase de Testes:
-  - Versão 1.0.8
+  - Versão 1.0.9
 
 Descrição:
-  Alteração nas proporções dos elementos no mobile.
+  Adição de conteúdo na terceira seção
 
 ----------------------------------------------------------------------------
