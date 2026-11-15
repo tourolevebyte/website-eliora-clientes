@@ -1,12 +1,12 @@
 ----------------------------------------------------------------------------
 Título:
-  Adição de Seções e Scroll
+  Rolagem de página e Ramo de oliveira
 
 ----------------------------------------------------------------------------
 Fase de Testes:
-  - Versão 1.0.6
+  - Versão 1.0.7
 
 Descrição:
-  Adicionado mais seções e modificação no comportamento do scroll y.
+  Reparação da rolagem de página no dispositivo móvel e alteração no ramo de olieira
 
 ----------------------------------------------------------------------------

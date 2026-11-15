@@ -33,6 +33,7 @@ body {
 
 main {
   position: relative;
+  touch-action: none;
 }
 
 header {

@@ -10,8 +10,8 @@
   }
   100% {
     opacity: 1;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%) scale(1) rotateZ(120deg);
+    left: 10%;
+    top: 40%;
+    transform: translate(-50%, -50%) scale(1) rotateZ(60deg);
   }
 }

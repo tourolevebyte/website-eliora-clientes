@@ -40,12 +40,28 @@ secaoAtual = secoes.reduce((maisProxima, secao, indice) => {
   return distancia < distanciaAtual ? indice : maisProxima;
 }, 0);
 
+// Mouse e trackpad
 Observer.create({
   target: window,
-  type: "wheel,touch",
+  type: "wheel",
   preventDefault: true,
   tolerance: 20,
-  wheelSpeed: 1,
+
+  onDown: () => {
+    irParaSecao(secaoAtual + 1);
+  },
+
+  onUp: () => {
+    irParaSecao(secaoAtual - 1);
+  }
+});
+
+// Tela sensível ao toque
+Observer.create({
+  target: window,
+  type: "touch",
+  preventDefault: true,
+  tolerance: 20,
 
   onDown: () => {
     irParaSecao(secaoAtual + 1);
@@ -86,16 +102,22 @@ function animar(el, tag, delay) {
   if (!tag || !el) return;
 
   if (tag === 'deslizar-para-direita') {
-    const larguraFinal = el.getBoundingClientRect().width;
-
     el.style.clipPath = 'inset(0 100% 0 0)';
     el.style.opacity = '0';
 
-    setTimeout(() => {
-      el.style.transition = 'clip-path 0.8s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.6s ease';
-      el.style.clipPath = 'inset(0 0% 0 0)';
-      el.style.opacity = '0.5';
-    }, 1000);
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        setTimeout(() => {
+          el.style.transition = `
+            clip-path 0.8s cubic-bezier(0.25, 1, 0.5, 1),
+            opacity 0.6s ease
+          `;
+
+          el.style.clipPath = 'inset(0 0 0 0)';
+          el.style.opacity = '0.5';
+        }, 200);
+      });
+    });
   }
   if (tag === 'surgir-para-cima') {
     const [direcao, valorComUnidade] = el.dataset.ani.split('_');
