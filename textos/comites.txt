@@ -1,12 +1,15 @@
 ----------------------------------------------------------------------------
-Título:
-  Manutenção
+Título Corrente:
+  - Seção 2 (Trabalhos)
+
+Modelos de Títulos:
+  - Manutenção (para reparações curtas)
 
 ----------------------------------------------------------------------------
 Fase de Testes:
-  - Versão 1.0.72
+  - Versão 1.0.8
 
 Descrição:
-  Mudança no código de rolagem de página
+  Alteração nas proporções dos elementos no mobile.
 
 ----------------------------------------------------------------------------
